@@ -1,0 +1,10 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/repro
+    username: postgispoc
+    password: changemeforprod
+  liquibase:
+    url: jdbc:postgresql://localhost:5432/repro
+    user: postgispoc
+    password: changemeforprod
+    change-log: classpath:db/changelog/changelog.sql
