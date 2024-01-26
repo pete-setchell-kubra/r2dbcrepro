@@ -40,4 +40,11 @@ class AssetRepositoryTest @Autowired constructor(val assetRepository: AssetRepos
             assertNotNull(a?.geom)
         }
     }
+
+    @Test
+    fun testByteBufferRead() {
+        runBlocking {
+            val buf = assetRepository.getDeadBeef()
+        }
+    }
 }
